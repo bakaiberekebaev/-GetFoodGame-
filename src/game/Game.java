@@ -20,7 +20,7 @@ import java.io.IOException;
  */
 public class Game { // главный класс
     static int score = 0;
-    static int ditems = 0; // вещи,которые не смогли поймать
+    static int ditems = 0; // вещи,которые вы не смогли поймать
     public static void main(String[] args) throws IOException, InterruptedException {
 
         JFrame frame = new JFrame("GetFoodGame"){
@@ -28,13 +28,13 @@ public class Game { // главный класс
             public void paint(Graphics g){
                 super.paint(g);
                 g.setColor(Color.BLACK);
-                g.drawString("score: "+ score,20,40);
+                g.drawString("score: "+ score,30,60);
             }
         };
         frame.setLayout(null);
-        frame.getContentPane().setBackground(Color.white);
+        frame.getContentPane().setBackground(Color.red);
         Stand stand = new Stand();
-        stand.setBackground(Color.WHITE);
+        stand.setBackground(Color.RED);
         stand.setBounds(stand.getStandX(),stand.getStandY(),100,100);
         Rectangle standRec = new Rectangle(stand.getStandX(),stand.getStandY(),50,60);
 
@@ -42,7 +42,7 @@ public class Game { // главный класс
         frame.addKeyListener(observer);
 
         frame.add(stand).setVisible(true);
-        frame.setSize(700,500);
+        frame.setSize(900,700);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setResizable(false);
         frame.setLocationRelativeTo(null);
@@ -66,10 +66,10 @@ public class Game { // главный класс
                         fruit.setLocation(potato.getPotatoX(), potato.getPotatoY());
                         if (standRec.intersects(fruit)) {
                             frame.remove(potato);
-                            score += 100;
+                            score += 111;
                             frame.repaint();
                             Thread.currentThread().stop();
-                        }else if(!standRec.intersects(fruit) &&  potato.getPotatoY() > 450 ){
+                        }else if(!standRec.intersects(fruit) &&  potato.getPotatoY() > 550 ){
                             ditems++;
                             System.out.println(ditems);
                             frame.remove(potato);
@@ -93,10 +93,10 @@ public class Game { // главный класс
                         fruit.setLocation(watermelon.getwX(), watermelon.getwY());
                         if (standRec.intersects(fruit)) {
                             frame.remove(watermelon);
-                            score += 100;
+                            score += 111;
                             frame.repaint();
                             Thread.currentThread().stop();
-                        }else if(!standRec.intersects(fruit) &&  watermelon.getwY() > 450){
+                        }else if(!standRec.intersects(fruit) &&  watermelon.getwY() > 550){
                             ditems++;
                             System.out.println(ditems);
                             frame.remove(watermelon);
