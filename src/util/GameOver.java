@@ -16,8 +16,8 @@ public class GameOver extends JDialog
 
 
         add(new JLabel(
-                        "<html><h1><i>Уппс!... Игра проиграна:(</i></h1><hr>"
-                                + "(Вы не смогли поймать две вещи!)</html>"),
+                        "<html><h1><i>Игра проиграна:(</i></h1><hr>"
+                                + "(Вы не смогли поймать одну вещь!)</html>"),
                 BorderLayout.CENTER);
 
 
