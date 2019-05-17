@@ -10,13 +10,8 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
-
-
-
-
-
 /**
- * Created by Andrey on 18.06.2017.
+ * Created by Bakai 
  */
 public class Game { // главный класс
     static int score = 0;
