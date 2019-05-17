@@ -10,8 +10,13 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
+
+
+
+
+
 /**
- * Created by Bakai 
+ * Created by Bakai
  */
 public class Game { // главный класс
     static int score = 0;
@@ -48,11 +53,11 @@ public class Game { // главный класс
             int number = (int)(Math.random() * 3);
             if(number == 0) {
                 Potato potato = new Potato();
-                potato.setBackground(Color.WHITE);
+                potato.setBackground(Color.blue);
                 Thread.sleep(1000);
                 potato.setBounds(potato.getPotatoX(),potato.getPotatoY(),100,100);
                 frame.add(potato).setVisible(true);
-                Rectangle fruit = new Rectangle(potato.getPotatoX(),potato.getPotatoY(),100,60);
+                Rectangle fruit = new Rectangle(potato.getPotatoX(),potato.getPotatoY(),80,50);
                 Timer timer = new Timer(50, new ActionListener() {
                     @Override
                     public void actionPerformed(ActionEvent e) {
@@ -75,7 +80,7 @@ public class Game { // главный класс
                 timer.start();
             }else if(number == 1){
                 Watermelon watermelon = new Watermelon();
-                watermelon.setBackground(Color.WHITE);
+                watermelon.setBackground(Color.RED);
                 Thread.sleep(1000);
                 watermelon.setBounds(watermelon.getwX(),watermelon.getwY(),100,100);
                 frame.add(watermelon).setVisible(true);
