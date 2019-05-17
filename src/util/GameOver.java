@@ -6,7 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /**
- * Created by Andrey on 26.06.2017.
+ * Created by Bakai
  */
 public class GameOver extends JDialog
 {
@@ -16,8 +16,8 @@ public class GameOver extends JDialog
 
 
         add(new JLabel(
-                        "<html><h1><i>Уппс!... Проигрыш :(</i></h1><hr>"
-                                + "(Вы не смогли поймать 2 вещи)</html>"),
+                        "<html><h1><i>Уппс!... Игра проиграна:(</i></h1><hr>"
+                                + "(Вы не смогли поймать две вещи!)</html>"),
                 BorderLayout.CENTER);
 
 
