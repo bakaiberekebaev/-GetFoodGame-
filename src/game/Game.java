@@ -115,7 +115,7 @@ public class Game { // главный класс
                 Timer timer = new Timer(50, new ActionListener() {
                     @Override
                     public void actionPerformed(ActionEvent e) {
-                        banana.setbY(banana.getbY() + 10);
+                        banana.setbY(banana.getbY() + 20);
                         banana.setLocation(banana.getbX(), banana.getbY());
                         fruit.setLocation(banana.getbX(), banana.getbY());
                         if (standRec.intersects(fruit)) {
@@ -133,7 +133,7 @@ public class Game { // главный класс
                 });
                 timer.start();
             }
-            if(ditems == 2){
+            if(ditems == 1){
                 new GameOver(frame).setVisible(true);
             }
         }
