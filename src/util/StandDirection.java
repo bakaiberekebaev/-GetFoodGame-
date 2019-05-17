@@ -1,7 +1,7 @@
 package util;
 
 /**
- * Created by Andrey on 03.07.2017.
+ * Created by Bakai
  */
 public enum StandDirection { // enum со значениями
     LEFT,
