@@ -6,8 +6,7 @@ import items.Stand;
 import java.awt.*;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
-
-public class KeyboardObserver extends KeyAdapter { // Отслеживает нажатия клавиш!
+public class KeyboardObserver extends KeyAdapter { // слежение нажатия клавиш!
     private Stand stand;
     private Rectangle rectangle;
     public KeyboardObserver(Stand stand,Rectangle rectangle) {
