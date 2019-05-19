@@ -16,11 +16,11 @@ import java.io.IOException;
 
 
 /**
- * Created by Bakai
+ * Created by Andrey on 18.06.2017.
  */
 public class Game { // главный класс
     static int score = 0;
-    static int ditems = 0; // вещи,которые вы не смогли поймать
+    static int ditems = 0; // вещи,которые не смогли поймать
     public static void main(String[] args) throws IOException, InterruptedException {
 
         JFrame frame = new JFrame("GetFoodGame"){
@@ -28,13 +28,13 @@ public class Game { // главный класс
             public void paint(Graphics g){
                 super.paint(g);
                 g.setColor(Color.BLACK);
-                g.drawString("score: "+ score,30,60);
+                g.drawString("score: "+ score,20,40);
             }
         };
         frame.setLayout(null);
-        frame.getContentPane().setBackground(Color.red);
+        frame.getContentPane().setBackground(Color.white);
         Stand stand = new Stand();
-        stand.setBackground(Color.RED);
+        stand.setBackground(Color.WHITE);
         stand.setBounds(stand.getStandX(),stand.getStandY(),100,100);
         Rectangle standRec = new Rectangle(stand.getStandX(),stand.getStandY(),50,60);
 
@@ -42,7 +42,7 @@ public class Game { // главный класс
         frame.addKeyListener(observer);
 
         frame.add(stand).setVisible(true);
-        frame.setSize(900,700);
+        frame.setSize(700,500);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setResizable(false);
         frame.setLocationRelativeTo(null);
@@ -53,11 +53,11 @@ public class Game { // главный класс
             int number = (int)(Math.random() * 3);
             if(number == 0) {
                 Potato potato = new Potato();
-                potato.setBackground(Color.blue);
+                potato.setBackground(Color.WHITE);
                 Thread.sleep(1000);
                 potato.setBounds(potato.getPotatoX(),potato.getPotatoY(),100,100);
                 frame.add(potato).setVisible(true);
-                Rectangle fruit = new Rectangle(potato.getPotatoX(),potato.getPotatoY(),80,50);
+                Rectangle fruit = new Rectangle(potato.getPotatoX(),potato.getPotatoY(),100,60);
                 Timer timer = new Timer(50, new ActionListener() {
                     @Override
                     public void actionPerformed(ActionEvent e) {
@@ -66,10 +66,10 @@ public class Game { // главный класс
                         fruit.setLocation(potato.getPotatoX(), potato.getPotatoY());
                         if (standRec.intersects(fruit)) {
                             frame.remove(potato);
-                            score += 111;
+                            score += 100;
                             frame.repaint();
                             Thread.currentThread().stop();
-                        }else if(!standRec.intersects(fruit) &&  potato.getPotatoY() > 550 ){
+                        }else if(!standRec.intersects(fruit) &&  potato.getPotatoY() > 450 ){
                             ditems++;
                             System.out.println(ditems);
                             frame.remove(potato);
@@ -80,7 +80,7 @@ public class Game { // главный класс
                 timer.start();
             }else if(number == 1){
                 Watermelon watermelon = new Watermelon();
-                watermelon.setBackground(Color.RED);
+                watermelon.setBackground(Color.WHITE);
                 Thread.sleep(1000);
                 watermelon.setBounds(watermelon.getwX(),watermelon.getwY(),100,100);
                 frame.add(watermelon).setVisible(true);
@@ -93,10 +93,10 @@ public class Game { // главный класс
                         fruit.setLocation(watermelon.getwX(), watermelon.getwY());
                         if (standRec.intersects(fruit)) {
                             frame.remove(watermelon);
-                            score += 111;
+                            score += 100;
                             frame.repaint();
                             Thread.currentThread().stop();
-                        }else if(!standRec.intersects(fruit) &&  watermelon.getwY() > 550){
+                        }else if(!standRec.intersects(fruit) &&  watermelon.getwY() > 450){
                             ditems++;
                             System.out.println(ditems);
                             frame.remove(watermelon);
@@ -115,7 +115,7 @@ public class Game { // главный класс
                 Timer timer = new Timer(50, new ActionListener() {
                     @Override
                     public void actionPerformed(ActionEvent e) {
-                        banana.setbY(banana.getbY() + 20);
+                        banana.setbY(banana.getbY() + 10);
                         banana.setLocation(banana.getbX(), banana.getbY());
                         fruit.setLocation(banana.getbX(), banana.getbY());
                         if (standRec.intersects(fruit)) {
@@ -133,7 +133,7 @@ public class Game { // главный класс
                 });
                 timer.start();
             }
-            if(ditems == 1){
+            if(ditems == 2){
                 new GameOver(frame).setVisible(true);
             }
         }
