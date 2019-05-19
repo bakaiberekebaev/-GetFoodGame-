@@ -15,9 +15,9 @@ import java.io.IOException;
 
 
 
-/**
- * Created by Andrey on 18.06.2017.
- */
+
+ //Created by Andrey on 18.06.2017.
+ 
 public class Game { // главный класс
     static int score = 0;
     static int ditems = 0; // вещи,которые не смогли поймать
