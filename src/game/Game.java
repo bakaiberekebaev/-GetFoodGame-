@@ -12,12 +12,6 @@ import java.awt.event.ActionListener;
 import java.io.IOException;
 
 
-
-
-
-
- //Created by Bakai
- 
 public class Game { // главный класс
     static int score = 0;
     static int ditems = 0; // вещи,которые не смогли поймать
