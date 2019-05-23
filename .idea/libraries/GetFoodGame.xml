@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="GetFoodGame">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/GetFoodGame.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
