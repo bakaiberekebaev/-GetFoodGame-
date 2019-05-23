@@ -26,9 +26,9 @@ public class Game { // главный класс
             }
         };
         frame.setLayout(null);
-        frame.getContentPane().setBackground(Color.white);
+        frame.getContentPane().setBackground(Color.gray);
         Stand stand = new Stand();
-        stand.setBackground(Color.WHITE);
+        stand.setBackground(Color.GRAY);
         stand.setBounds(stand.getStandX(),stand.getStandY(),100,100);
         Rectangle standRec = new Rectangle(stand.getStandX(),stand.getStandY(),50,60);
 
