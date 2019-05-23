@@ -26,7 +26,7 @@ public class Game { // главный класс
             }
         };
         frame.setLayout(null);
-        frame.getContentPane().setBackground(Color.gray);
+        frame.getContentPane().setBackground(Color.white);
         Stand stand = new Stand();
         stand.setBackground(Color.GRAY);
         stand.setBounds(stand.getStandX(),stand.getStandY(),100,100);
