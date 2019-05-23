@@ -24,9 +24,9 @@ public class GameOver extends JDialog
 
         add(new JLabel(
                         "<html><h1><i>Игра проиграна:(</i></h1><hr>"
-                                + "(Вы не смогли поймать три вещи :))</html>"),
+                                + "(Вы не смогли поймать две вещи :))</html>"),
                 BorderLayout.CENTER);
-        Sound("/home/taty/git/-GetFoodGame-/GameOver908 (online-audio-converter.com).wav");
+        Sound(("C:/-GetFoodGame--master/GameOver908 (online-audio-converter.com).wav"));
 
 
 
